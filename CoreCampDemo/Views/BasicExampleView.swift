@@ -10,15 +10,15 @@ import UIKit
 
 class BasicExampleView: UIView {
     
-    override var canBecomeFocused: Bool { return true }
+//    override var canBecomeFocused: Bool { return true }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-//        backgroundColor = isFocused ? focusColor : .clear
+        backgroundColor = isFocused ? focusColor : .clear
         
-        coordinator.addCoordinatedAnimations(
-            {[unowned self] in
-                self.backgroundColor = self.isFocused ? self.focusColor : .clear
-            }, completion: nil)
+//        coordinator.addCoordinatedAnimations(
+//            {[unowned self] in
+//                self.backgroundColor = self.isFocused ? self.focusColor : .clear
+//            }, completion: nil)
     }
     
     var focusColor: UIColor { .white }

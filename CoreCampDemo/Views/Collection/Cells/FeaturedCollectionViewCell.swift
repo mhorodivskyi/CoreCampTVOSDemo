@@ -50,7 +50,7 @@ class FeaturedCollectionViewCell: BaseCollectionViewCell<VideoModel> {
     }
     
     override func didHintFocusMovement(_ hint: UIFocusMovementHint) {
-        transform3D = hint.interactionTransform.withScale(by: focusScale)
+//        transform3D = hint.interactionTransform.withScale(by: focusScale)
     }
     
     override func awakeFromNib() {

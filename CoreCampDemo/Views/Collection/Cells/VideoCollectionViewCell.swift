@@ -25,9 +25,9 @@ class VideoCollectionViewCell: BaseCollectionViewCell<VideoModel> {
         }
     }
     private func updateAppearance() {
-        titleLabel.transform = isFocused ? CGAffineTransform.init(translationX: 0, y: 30).scaledBy(x: 1.1, y: 1.1) : .identity
-        titleLabel.alpha = isFocused ? 1 : 0.6
-        timeView.alpha = isFocused ? 1 : 0
+//        titleLabel.transform = isFocused ? CGAffineTransform.init(translationX: 0, y: 30).scaledBy(x: 1.1, y: 1.1) : .identity
+//        titleLabel.alpha = isFocused ? 1 : 0.6
+//        timeView.alpha = isFocused ? 1 : 0
     }
     
     override func fill(with model: VideoModel?) {
@@ -55,6 +55,7 @@ class VideoCollectionViewCell: BaseCollectionViewCell<VideoModel> {
         timeView.translatesAutoresizingMaskIntoConstraints = false
         timeView.layer.cornerRadius = 4
         timeView.layer.masksToBounds = true
+        timeView.alpha = 0
         
         let timeLabel = UILabel(frame: .zero)
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
